@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reproductor de musica</title>
+  </head>
+  <body>
+    <hader>
+      <h1>Audio Player Mone</h1>
+    </header>
+    <section>
+      <audio duration id="cancion" src="assets/audios/avicii.mp3" controls=""></audio>
+      <div id="progressBar">
+        <progress value="0" max="100"></progress> <!--todavia no se como animarla :( -->
+      </div>
+      <div id="audioControls">
+        <button type="button" onclick="backSegments();"><< </button>
+        <button type="button" onclick="back();"> < Back </button>
+        <button type="button" onclick="stop();">Stop</button>
+        <button type="button" onclick="play();">Play</button>
+        <button type="button" onclick="pause();">Pause</button>
+        <button type="button" onclick="forward();">Forward> </button>
+        <button type="button" onclick="forwardSegments();">>> </button>
+
+      </div>
+      <div id="volumeControls">
+        <label>Volume</label>
+        <button type="button" onclick="bajarVolumen();">-</button>
+        <input id="barraVolumen" onchange="volumenBarra();"type="range" value="50" min="0" max="100">
+        <!--tanto los botones como la barra modifican el volumen, pero aun no sé
+        como interconectarlos, como hacer que cuando clickeo los botones la barra se mueva también -->
+        <button type="button" onclick="subirVolumen();">+</button>
+        <button type="button" onclick="mute();">Mute</button>
+      </div>
+      <script src="assets/js/javascript.js"></script>
+    </section>
+  </body>
+</html>
